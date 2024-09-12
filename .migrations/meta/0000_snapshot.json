@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "mysql",
-  "id": "13a83655-c8a5-4103-95cd-2d9bab32671e",
+  "id": "f21c1b6e-0494-4436-ab39-aedc9a2d7e99",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "tb_goal": {
@@ -9,14 +9,14 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "varchar(256)",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
         },
         "title": {
           "name": "title",
-          "type": "varchar(256)",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
@@ -50,6 +50,65 @@
       "uniqueConstraints": {
         "tb_goal_id_unique": {
           "name": "tb_goal_id_unique",
+          "columns": [
+            "id"
+          ]
+        }
+      }
+    },
+    "tb_goal_completions": {
+      "name": "tb_goal_completions",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "goal_id": {
+          "name": "goal_id",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(now())"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "tb_goal_completions_goal_id_tb_goal_id_fk": {
+          "name": "tb_goal_completions_goal_id_tb_goal_id_fk",
+          "tableFrom": "tb_goal_completions",
+          "tableTo": "tb_goal",
+          "columnsFrom": [
+            "goal_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "tb_goal_completions_id": {
+          "name": "tb_goal_completions_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "uniqueConstraints": {
+        "tb_goal_completions_id_unique": {
+          "name": "tb_goal_completions_id_unique",
           "columns": [
             "id"
           ]
