@@ -32,6 +32,7 @@
   "dependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
+    "@fastify/cors": "^9.0.1",
     "@paralleldrive/cuid2": "^2.2.2",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",

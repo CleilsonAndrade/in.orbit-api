@@ -21,6 +21,7 @@ in.orbit-api é uma API Rest com o fim de realizar o gerenciamento de metas sema
 - [x] Cadastrar metas para a semana com quantidade de dias para realizar<br>
 - [x] Listagem das metas da ultima semana com quantidade de dias que foram completados na semana<br>
 - [x] Marcar meta como completa, validando se não foi completada antes e contando os dias de concluído<br>
+- [x] Resumo das metas da ultima semana com valor total das mesmas e detalhes de cada uma agrupadas por dia<br>
 
 ## Features
 - [x] Utilização de Common Table Expression (CTE)<br>
@@ -39,6 +40,7 @@ in.orbit-api é uma API Rest com o fim de realizar o gerenciamento de metas sema
 <kbd>POST</kbd> | <kbd>/goals</kbd> | Responsável por cadastrar uma nova meta para a semana informado titulo e quantidade dias ser executada | Não
 <kbd>GET</kbd> | <kbd>/pending-goals</kbd> | Responsável por listar as metas da ultima semana com a contagem dos dias de frequência completados e não completados | Não
 <kbd>POST</kbd> | <kbd>/completions</kbd> | Responsável por validar e marcar como concluída uma meta da semana, informando o ID via corpo de requisição, identificando se todos os dias foram completados | Não
+<kbd>GET</kbd> | <kbd>/summary</kbd> | Responsável por listar um resumo das metas da ultima semana com valor total das mesmas e detalhes de cada uma agrupadas por dia | Não
 
 # 🚀 <span id="instalação">Instalação</span>
 ```bash
