@@ -37,7 +37,7 @@ in.orbit-api é uma API Rest com o fim de realizar o gerenciamento de metas sema
 # 📍 <span id="endpoints">Endpoints</span>
 | Método | Endpoint               | Resumo                                          | Autenticação               
 |--------|----------------------|-----------------------------------------------------|--------------------------
-<kbd>POST</kbd> | <kbd>/goals</kbd> | Responsável por cadastrar uma nova meta para a semana informado titulo e quantidade dias ser executada | Não
+<kbd>POST</kbd> | <kbd>/goals</kbd> | Responsável por cadastrar uma nova meta para a semana informado titulo e quantidade dias a serem realizada(s) | Não
 <kbd>GET</kbd> | <kbd>/pending-goals</kbd> | Responsável por listar as metas da ultima semana com a contagem dos dias de frequência completados e não completados | Não
 <kbd>POST</kbd> | <kbd>/completions</kbd> | Responsável por validar e marcar como concluída uma meta da semana, informando o ID via corpo de requisição, identificando se todos os dias foram completados | Não
 <kbd>GET</kbd> | <kbd>/summary</kbd> | Responsável por listar um resumo das metas da ultima semana com valor total das mesmas e detalhes de cada uma agrupadas por dia | Não
