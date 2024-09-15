@@ -1,7 +1,7 @@
+import { db } from '@/db'
+import { goals, goalsCompletions } from '@/db/schema'
 import dayjs from 'dayjs'
 import { and, count, eq, gte, lte, sql } from 'drizzle-orm'
-import { db } from '../db'
-import { goals, goalsCompletions } from '../db/schema'
 
 interface CreateGoalCompletionRequest {
   goalId: string

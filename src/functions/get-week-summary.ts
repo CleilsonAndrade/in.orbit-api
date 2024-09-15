@@ -1,8 +1,8 @@
+import { db } from '@/db'
+import { goals, goalsCompletions } from '@/db/schema'
 import dayjs from 'dayjs'
 import weekOfYear from 'dayjs/plugin/weekOfYear'
 import { and, eq, gte, lte, sql } from 'drizzle-orm'
-import { db } from '../db'
-import { goals, goalsCompletions } from '../db/schema'
 
 dayjs.extend(weekOfYear)
 
