@@ -48,6 +48,7 @@ export async function getWeekSummary() {
           lte(goalsCompletions.createdAt, lastDayOfWeek)
         )
       )
+      .orderBy(desc(goalsCompletions.createdAt))
   )
 
   const goalsCompletedByWeekDay = db.$with('goals_completed_by_week_day').as(
