@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "tsup src --format cjs",
     "dev": "tsx --watch --env-file .env src/http/server.ts",
     "seed": "tsx --env-file .env src/db/seed.ts",
     "format": "biome format --write src/",
@@ -10,10 +11,7 @@
     "commit": "npx --no-install lint-staged && git-cz"
   },
   "lint-staged": {
-    "{src,apps,libs,test}/**/*.{ts,tsx}": [
-      "yarn format",
-      "yarn lint"
-    ]
+    "{src,apps,libs,test}/**/*.{ts,tsx}": ["yarn format", "yarn lint"]
   },
   "config": {
     "commitizen": {
@@ -41,6 +39,7 @@
     "fastify": "^4.28.1",
     "fastify-type-provider-zod": "^2.0.0",
     "mysql2": "^3.11.1",
+    "tsup": "^8.3.0",
     "zod": "^3.23.8"
   }
 }
