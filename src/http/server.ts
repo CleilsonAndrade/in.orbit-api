@@ -1,7 +1,10 @@
 import fastifyCors from '@fastify/cors'
+import fastifySwagger from '@fastify/swagger'
+import fastifySwaggerUi from '@fastify/swagger-ui'
 import fastify from 'fastify'
 import {
   type ZodTypeProvider,
+  jsonSchemaTransform,
   serializerCompiler,
   validatorCompiler,
 } from 'fastify-type-provider-zod'
@@ -14,6 +17,33 @@ const app = fastify().withTypeProvider<ZodTypeProvider>()
 
 app.register(fastifyCors, {
   origin: '*',
+})
+
+app.register(fastifySwagger, {
+  swagger: {
+    consumes: ['application/json'],
+    produces: ['application/json'],
+    info: {
+      title: 'in-orbit-api',
+      description:
+        'API specifications for the in-orbit-api application backend.',
+      version: '1.0.0',
+      contact: {
+        email: 'cleilsonjose@hotmail.com',
+        name: 'Cleilson Andrade',
+        url: 'https://www.linkedin.com/in/cleilson-andrade/',
+      },
+      license: {
+        name: 'License',
+        url: 'https://raw.githubusercontent.com/CleilsonAndrade/in-orbit-api/main/LICENSE',
+      },
+    },
+  },
+  transform: jsonSchemaTransform,
+})
+
+app.register(fastifySwaggerUi, {
+  routePrefix: '/docs',
 })
 
 app.setValidatorCompiler(validatorCompiler)

@@ -10,6 +10,9 @@ export const createCompletionRoute: FastifyPluginAsyncZod = async app => {
         body: z.object({
           goalId: z.string(),
         }),
+        summary: 'Create an goal completion',
+        description: 'Responsible for goal completion informing the goal id',
+        tags: ['create-goals'],
       },
     },
     async request => {
