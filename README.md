@@ -14,7 +14,7 @@
 * [Licença](#licença)
 
 # 📃 <span id="descrição">Descrição</span>
-in.orbit-api é uma API Rest com o fim de realizar o gerenciamento de metas semanais, permitindo o cadastramento da meta, quantidade de dias que será realizada durante a semana, listagem, exibindo as metas da ultima semana baseando-se no dia atual com a contagem de dias que a meta foi realizada e permitindo a atualização de uma meta como concluída. Aplicação desenvolvida utilizando a API tecnologia [**TypeScript**](https://www.typescriptlang.org/), com a biblioteca [**Fastify**](https://www.fastify.io/) para web server, [**Drizzle ORM**](https://orm.drizzle.team/) para manipulação de dados do banco e o banco de dados SQL [**MySQL**](https://www.mysql.com/), [**Zod**](https://github.com/colinhacks/zod) para as validações e [**biomejs**](https://biomejs.dev/) para formatter e linter para a sintaxe.
+in.orbit-api é uma API Rest com o fim de realizar o gerenciamento de metas semanais, permitindo o cadastramento da meta, quantidade de dias que será realizada durante a semana, listagem, exibindo as metas da ultima semana baseando-se no dia atual com a contagem de dias que a meta foi realizada e permitindo a atualização de uma meta como concluída. Aplicação desenvolvida utilizando a tecnologia [**TypeScript**](https://www.typescriptlang.org/), com a biblioteca [**Fastify**](https://www.fastify.io/) para web server, [**Drizzle ORM**](https://orm.drizzle.team/) para manipulação de dados do banco e o banco de dados SQL [**MySQL**](https://www.mysql.com/), [**Zod**](https://github.com/colinhacks/zod) para as validações e [**biomejs**](https://biomejs.dev/) para formatter e linter para a sintaxe.
 .
 
 # 📌 <span id="requisitos">Requisitos Funcionais</span>
