@@ -1,7 +1,7 @@
 <div align="center">
   <h1>in.orbit-api</h1>
   <p>in.orbit-api é uma API Rest com o fim de realizar o gerenciamento de metas semanais, permitindo o cadastramento da meta, quantidade de dias que será realizada durante a semana, listagem, exibindo as metas da ultima semana baseando-se no dia atual com a contagem de dias que a meta foi realizada e permitindo a atualização de uma meta como concluída.</p>
-  <img src="./references/flow.png" alt="Flow" width="800">
+  <img src="/references/flow.png" alt="Flow" width="800">
 </div>
 
 # 📒 Índice
